@@ -1,0 +1,25 @@
+# Navigation
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias dev="cd ~/dev"
+alias tmp="cd ~/tmp"
+
+# ls
+alias la="ls -a"
+alias lsla="ls -la"
+
+# Programs
+alias git="g"
+alias python="python3"
+alias py="python3"
+pym() {
+    python3 main.py "$@"
+}
+
+# Print each PATH entry on a separate line
+alias path='echo -e ${PATH//:/\\n}'
+
+# Enable aliases to be sudo’ed
+alias sudo='sudo '

@@ -34,16 +34,8 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 # Alias
-alias python="python3"
-alias py="python3"
-pym() {
-    python3 main.py "$@"
-}
-
-if [[ "$OSTYPE" == "darwin"* ]]; then
-    alias ls='ls -G'
-else
-    alias ls='ls --color=auto'
+if [ -f "$HOME/.aliases" ]; then
+    source "$HOME/.aliases"
 fi
 
 # asdf
