@@ -1,9 +1,6 @@
 # PATH
 export PATH=$PATH:~/bin
 
-# Prompt
-PROMPT='%F{green}%n@%m%f:%F{blue}%~%f$ %(?..%F{red}⚠️ %f)'
-
 # History
 HISTSIZE=10000
 SAVEHIST=10000
@@ -18,6 +15,9 @@ bindkey -e
 
 # Autocomplete
 autoload -Uz compinit && compinit
+autoload -Uz vcs_info
+precmd() { vcs_info }
+zstyle ':vcs_info:git:*' formats '%b '
 zstyle ':completion:*' auto-description 'specify: %d'
 zstyle ':completion:*' completer _expand _complete _correct _approximate
 zstyle ':completion:*' format 'Completing %d'
@@ -32,6 +32,8 @@ zstyle ':completion:*' use-compctl false
 zstyle ':completion:*' verbose true
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
+setopt PROMPT_SUBST
+PROMPT='%F{green}%*%f %F{blue}%~%f %F{red}${vcs_info_msg_0_}%f$ '
 
 # Alias
 if [ -f "$HOME/.aliases" ]; then
