@@ -8,8 +8,7 @@ set undofile
 
 " Appearence
 syntax on
-set number
-set relativenumber
+set number relativenumber
 set ruler
 set showcmd
 colorscheme desert
