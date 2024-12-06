@@ -11,6 +11,7 @@ alias la="ls -a"
 alias lsla="ls -la"
 
 # Programs
+<<<<<<< HEAD
 vim() {
   if command -v nvim >/dev/null 2>&1; then
     nvim "$@"
@@ -19,6 +20,9 @@ vim() {
   fi
 }
 
+=======
+alias vim='command -v nvim >/dev/null 2>&1 && nvim || vim ' # Use Neovim if installed
+>>>>>>> 240b1fc578f2b05c3465a7bda9e6a6cb14b6db60
 alias g="git"
 alias push="git push origin "
 alias python="python3"
@@ -32,6 +36,7 @@ alias path='echo -e ${PATH//:/\\n}'
 
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
+<<<<<<< HEAD
 # Navigation
 alias ..="cd .."
 alias ...="cd ../.."
@@ -71,3 +76,5 @@ alias path='echo -e ${PATH//:/\\n}'
 
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
+=======
+>>>>>>> 240b1fc578f2b05c3465a7bda9e6a6cb14b6db60
