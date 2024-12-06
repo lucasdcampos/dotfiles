@@ -11,7 +11,7 @@ alias la="ls -a"
 alias lsla="ls -la"
 
 # Programs
-alias vim='command -v nvim >/dev/null 2>&1 && nvim || vim' # Use Neovim if installed
+alias vim='command -v nvim >/dev/null 2>&1 && nvim || vim ' # Use Neovim if installed
 alias g="git"
 alias push="git push origin "
 alias python="python3"
