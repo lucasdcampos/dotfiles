@@ -33,7 +33,7 @@ zstyle ':completion:*' verbose true
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 setopt PROMPT_SUBST
-PROMPT='%F{green}%*%f %F{blue}%~%f %F{red}${vcs_info_msg_0_}%f$ '
+PROMPT='%F{green}%T%f %F{yellow}%n%f %F{blue}%~%f %F{red}${vcs_info_msg_0_}%f$ '
 
 # Alias
 if [ -f "$HOME/.aliases" ]; then

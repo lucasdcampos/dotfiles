@@ -12,7 +12,6 @@ set number
 set relativenumber
 set ruler
 set showcmd
-colorscheme desert
 set cursorline
 set laststatus=2
 

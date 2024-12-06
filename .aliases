@@ -1,8 +1,44 @@
 # Navigation
+alias ..="cd ../"
+alias ...="cd ../../"
+alias ....="cd ../../../"
+alias .....="cd ../../../../"
+alias dev="cd ~/dev/"
+alias tmp="cd ~/tmp/"
+
+# ls
+alias la="ls -a"
+alias lsla="ls -la"
+
+# Programs
+vim() {
+  if command -v nvim >/dev/null 2>&1; then
+    nvim "$@"
+  else
+    command vim "$@"
+  fi
+}
+
+alias g="git"
+alias push="git push origin "
+alias python="python3"
+alias py="python3"
+pym() {
+    python3 main.py "$@"
+}
+
+# Print each PATH entry on a separate line
+alias path='echo -e ${PATH//:/\\n}'
+
+# Enable aliases to be sudo’ed
+alias sudo='sudo '
+# Navigation
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
+alias home="cd ~/"
+alias h="home"
 alias dev="cd ~/dev"
 alias tmp="cd ~/tmp"
 
@@ -11,9 +47,19 @@ alias la="ls -a"
 alias lsla="ls -la"
 
 # Programs
-alias vim='command -v nvim >/dev/null 2>&1 && nvim || vim' # Use Neovim if installed
-alias g="git"
-alias push="git push origin "
+vim() {
+  if command -v nvim >/dev/null 2>&1; then
+    nvim "$@"
+  else
+    command vim "$@"
+  fi
+}
+
+alias g="git "
+alias gs="git status"
+alias ga="git add "
+alias gc="git commit -m "
+alias gp="git push "
 alias python="python3"
 alias py="python3"
 pym() {
