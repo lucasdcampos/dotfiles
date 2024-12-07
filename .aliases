@@ -1,5 +1,8 @@
 # Reload dotfiles
 alias .reload="python3 ~/.dotfiles/scripts/reload.py && zsh"
+alias .r=".reload"
+alias .sync="zsh ~/.dotfiles/scripts/sync.sh"
+alias .s=".sync"
 
 # Navigation
 alias ..="cd .."
