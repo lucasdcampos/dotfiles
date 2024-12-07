@@ -51,7 +51,7 @@ def copy_config_directory(dotfiles_dir, home_dir):
 def copy_dotfiles():
     """Main function to copy all dotfiles and the .config folder to the user's home directory."""
     current_user = get_current_user()
-    dotfiles_dir = '.dotfiles'
+    dotfiles_dir = f'/home/{current_user}/.dotfiles'
     home_dir = f'/home/{current_user}'
 
     if not os.path.exists(dotfiles_dir):
