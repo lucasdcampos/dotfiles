@@ -1,3 +1,6 @@
+# Reload dotfiles
+alias .reload="python3 ~/.dotfiles/scripts/reload.py && zsh"
+
 # Navigation
 alias ..="cd .."
 alias ...="cd ../.."
