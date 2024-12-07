@@ -1,7 +1,10 @@
-vim.cmd [[packadd packer.nvim]]
-vim.g.mapleader = ' '
-
 require('settings')
-require('keymaps')
-require('theme')
-require('plugins')
+
+local load_plugins = true
+
+if load_plugins then
+    vim.cmd [[packadd packer.nvim]]
+    require('keymaps')
+    require('theme')
+    require('plugins')
+end
