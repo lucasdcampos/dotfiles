@@ -2,10 +2,13 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
     use "rebelot/kanagawa.nvim"
     use "ellisonleao/gruvbox.nvim"
-    use(
+    use {
       'nvim-treesitter/nvim-treesitter',
-      {run = ':TSUpdate'}
-    )
+      run = function()
+          local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+          ts_update()
+      end,
+    }
   
     use {
       'nvim-telescope/telescope.nvim', tag = '0.1.8',
