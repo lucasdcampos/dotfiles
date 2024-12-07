@@ -9,20 +9,20 @@ This repository contains my personal dotfiles. They are minimalist but include e
 To install, run the following command in your terminal:
 
 ```bash
-git clone https://github.com/lucasdcampos/dotfiles && mv dotfiles .dotfiles && python3 .dotfiles/scripts/reload.py
+git clone https://github.com/lucasdcampos/dotfiles .dotfiles && chmod +x .dotfiles/scripts/setup.sh && ./.dotfiles/scripts/setup.sh
 ```
 
 Alternatively, step by step:
 1. Clone the repository:
 ```bash
-git clone https://github.com/lucasdcampos/dotfiles
+git clone https://github.com/lucasdcampos/dotfiles .dotfiles
 ```
-2. Rename the folder:
+2. Run the Shell Script:
 ```bash
-mv dotfiles .dotfiles
+./.dotfiles/scripts/setup.sh
 ```
-3. Run the Python Script:
+3. You can reload the configuration at any time by running
 ```bash
-python3 .dotfiles/scripts/reload.py
+.reload
 ```
 That's it! Your development environment should now be ready.
