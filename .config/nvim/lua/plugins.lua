@@ -15,6 +15,14 @@ return require('packer').startup(function(use)
       requires = { {'nvim-lua/plenary.nvim'} }
     }
 
+    use {
+      'nvim-tree/nvim-tree.lua',
+      requires = {
+        'nvim-tree/nvim-web-devicons', -- optional
+      },
+    }
+    
+    require("nvim-tree").setup()
     require'lspconfig'.pyright.setup{}
     
   end)
