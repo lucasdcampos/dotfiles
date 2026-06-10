@@ -16,8 +16,7 @@ precmd() { vcs_info }
 zstyle ':vcs_info:git:*' formats '%b '
 
 setopt prompt_subst
-PROMPT='%F{green}%*%f %F{yellow}%n%f %F{cyan}%~%f %F{red}${vcs_info_msg_0_}%f$ '
-
+PROMPT='%F{#7aa2f7}%n%f@%F{#bb9af7}%m%f %F{#7dcfff}%~%f %F{#9ece6a}${vcs_info_msg_0_}%f %F{#c0caf5}❯%f '
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
